@@ -1,0 +1,26 @@
+{
+  "page": 1,
+  "results": [
+    {
+        "backdrop_path": "/etj8E2o0Bud0HkONVQPjyCkIvpv.jpg",
+        "first_air_date": "2000-09-11 11:11:11.591918",
+        "genre_ids": [
+            10765,
+            18,
+            10759
+        ],
+        "id": 94997,
+        "name": "House of the Dragon",
+        "origin_country": [
+            "US"
+        ],
+        "original_language": "en",
+        "original_name": "House of the Dragon",
+        "overview": "The Targaryen dynasty is at the absolute apex of its power, with more than 15 dragons under their yoke. Most empires crumble from such heights. In the case of the Targaryens, their slow fall begins when King Viserys breaks with a century of tradition by naming his daughter Rhaenyra heir to the Iron Throne. But when Viserys later fathers a son, the court is shocked when Rhaenyra retains her status as his heir, and seeds of division sow friction across the realm.",
+        "popularity": 7490.466,
+        "poster_path": "/z2yahl2uefxDCl0nogcRBstwruJ.jpg",
+        "vote_average": 8.6,
+        "vote_count": 1437
+    }
+  ]
+}
