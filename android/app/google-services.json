@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "24468653843",
+    "project_id": "movie-expert-project-final",
+    "storage_bucket": "movie-expert-project-final.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:24468653843:android:15b564528c9f289c1b7ce6",
+        "android_client_info": {
+          "package_name": "com.example.dimovie_final_expert_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "24468653843-1bpo45vpnb6fjfsin8ornosvoecvqjvn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXwuICVc5CL4iE-bybL4Y_DhtbL9FbwME"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "24468653843-1bpo45vpnb6fjfsin8ornosvoecvqjvn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

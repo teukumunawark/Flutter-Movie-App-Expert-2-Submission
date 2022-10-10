@@ -1,44 +1,39 @@
 name: dimovie_final_expert_project
 description: A new Flutter project.
 
-
-publish_to: 'none' 
-
+publish_to: 'none'
 
 version: 1.0.0+1
 
 environment:
   sdk: ">=2.17.6 <3.0.0"
 
-
 dependencies:
   cupertino_icons: ^1.0.2
-  flutter_bloc: ^8.1.1
-  provider: ^6.0.3
-  http: ^0.13.3
-  get_it: ^7.1.3
+  firebase_core: ^1.24.0
+  firebase_crashlytics: ^2.8.13
   flutter:
     sdk: flutter
+  flutter_bloc: ^8.1.1
+  get_it: ^7.1.3
+  http: ^0.13.3
   module_common:
     path: module_common
   module_movies:
     path: module_movies
   module_tvseries:
     path: module_tvseries
+  provider: ^6.0.3
 
 dev_dependencies:
-  mockito: ^5.0.8
   build_runner: ^2.0.4
-  flutter_test:
-    sdk: flutter
- 
-
 
   flutter_lints: ^2.0.0
-
+  flutter_test:
+    sdk: flutter
+  mockito: ^5.0.8
 
 flutter:
   uses-material-design: true
   assets:
     - assets/
-  

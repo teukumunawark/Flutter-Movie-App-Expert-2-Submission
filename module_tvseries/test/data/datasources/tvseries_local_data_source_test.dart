@@ -8,10 +8,10 @@ import '../../helpers/test_helper.mocks.dart';
 
 void main() {
   late TvSeriesLocalDataSourceImpl dataSource;
-  late MockDatabaseHelper mockDatabaseHelper;
+  late MockTvSeriesDatabaseHelper mockDatabaseHelper;
 
   setUp(() {
-    mockDatabaseHelper = MockDatabaseHelper();
+    mockDatabaseHelper = MockTvSeriesDatabaseHelper();
     dataSource =
         TvSeriesLocalDataSourceImpl(databaseHelper: mockDatabaseHelper);
   });

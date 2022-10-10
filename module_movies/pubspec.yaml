@@ -21,6 +21,7 @@ dependencies:
   sqflite: ^2.0.0+3
   path_provider: ^2.0.2
   flutter_bloc: ^8.1.1
+  firebase_crashlytics: ^2.8.13
   rxdart: ^0.27.1
   module_common:
     path: ../module_common

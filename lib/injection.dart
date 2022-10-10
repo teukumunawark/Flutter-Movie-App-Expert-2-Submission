@@ -1,3 +1,4 @@
+import 'package:module_common/ssl/ssl_pinning_helper.dart';
 import 'package:module_movies/data/datasources/db/database_helper.dart';
 import 'package:module_movies/data/datasources/movie_local_data_source.dart';
 import 'package:module_movies/data/datasources/movie_remote_data_source.dart';
@@ -31,7 +32,6 @@ import 'package:module_tvseries/domain/usecases/save_watchlist.dart';
 import 'package:module_tvseries/domain/usecases/search_tv_series.dart';
 import 'package:module_tvseries/presentation/bloc/tv_series_bloc.dart';
 import 'package:get_it/get_it.dart';
-import 'package:http/http.dart' as http;
 
 final locator = GetIt.instance;
 
@@ -134,6 +134,7 @@ void init() {
       () => MovieLocalDataSourceImpl(
             databaseHelper: locator(),
           ));
+
   // Tv Series data sources
   locator.registerLazySingleton<TvSeriesRemoteDataSource>(
       () => TvSeriesRemoteDataSourceImpl(
@@ -153,5 +154,5 @@ void init() {
   );
 
   // external
-  locator.registerLazySingleton(() => http.Client());
+  locator.registerLazySingleton(() => SslPinningHelper.client);
 }
