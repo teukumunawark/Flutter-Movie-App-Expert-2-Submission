@@ -9,6 +9,7 @@ import 'package:module_tvseries/data/models/tv_detail_model.dart';
 import 'package:module_tvseries/data/models/tv_response.dart';
 
 import '../../helpers/test_helper.mocks.dart';
+import '../../json_reader.dart';
 
 void main() {
   const API_KEY = 'api_key=2174d146bb9c0eab47529b2e77d6b526';

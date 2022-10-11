@@ -1,12 +1,13 @@
 import 'dart:convert';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:module_common/json_reader.dart';
 import 'package:module_movies/data/models/genre_model.dart';
 import 'package:module_tvseries/data/models/next_episode_to_air_model.dart';
 import 'package:module_tvseries/data/models/season_model.dart';
 import 'package:module_tvseries/data/models/tv_detail_model.dart';
 import 'package:module_tvseries/data/models/tv_models.dart';
 import 'package:module_tvseries/data/models/tv_response.dart';
+
+import '../../json_reader.dart';
 
 void main() {
   final tTvSeriesModel = TvSeriesModel(
