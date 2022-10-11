@@ -59,7 +59,7 @@ void main() {
     test('should return a valid Now Playing model from JSON', () async {
       // arrange
       final Map<String, dynamic> jsonMap =
-          json.decode(readJson('dummy_data/dummy_data_movie/now_playing.json'));
+          json.decode(readJson('dummy_data/now_playing.json'));
       // act
       final result = MovieResponse.fromJson(jsonMap);
       // assert
@@ -70,7 +70,7 @@ void main() {
     test('should return a valid popular model from JSON', () async {
       // arrange
       final Map<String, dynamic> jsonMap =
-          json.decode(readJson('dummy_data/dummy_data_movie/popular.json'));
+          json.decode(readJson('dummy_data/popular.json'));
       // act
       final result = MovieResponse.fromJson(jsonMap);
       // assert
@@ -81,7 +81,7 @@ void main() {
     test('should return a valid Top Rated model from JSON', () async {
       // arrange
       final Map<String, dynamic> jsonMap =
-          json.decode(readJson('dummy_data/dummy_data_movie/top_rated.json'));
+          json.decode(readJson('dummy_data/top_rated.json'));
       // act
       final result = MovieResponse.fromJson(jsonMap);
       // assert
@@ -91,8 +91,8 @@ void main() {
     // Detail Movie Testing fromJson
     test('should return a valid Movie Detail model from JSON', () async {
       // arrange
-      final Map<String, dynamic> jsonMap = json
-          .decode(readJson('dummy_data/dummy_data_movie/movie_detail.json'));
+      final Map<String, dynamic> jsonMap =
+          json.decode(readJson('dummy_data/movie_detail.json'));
       // act
       final result = MovieDetailResponse.fromJson(jsonMap);
       // assert

@@ -10,7 +10,7 @@ import 'package:module_movies/data/models/movie_model.dart';
 import 'package:module_movies/data/repositories/movie_repository_impl.dart';
 import 'package:module_movies/domain/entities/movie.dart';
 
-import '../../dummy_data/dummy_data_movie/dummy_objects.dart';
+import '../../dummy_data/dummy_objects.dart';
 import '../../helpers/test_helper.mocks.dart';
 
 void main() {

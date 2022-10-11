@@ -5,7 +5,7 @@ import 'package:mocktail/mocktail.dart';
 import 'package:module_movies/presentation/bloc/movie_bloc.dart';
 import 'package:module_movies/presentation/pages/popular_movies_page.dart';
 
-import '../../dummy_data/dummy_data_movie/dummy_objects.dart';
+import '../../dummy_data/dummy_objects.dart';
 import '../../helpers/test_movie_bloc_helper.dart';
 
 void main() {
