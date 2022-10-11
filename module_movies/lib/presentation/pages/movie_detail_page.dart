@@ -66,6 +66,7 @@ class _MovieDetailPageState extends State<MovieDetailPage> {
             );
           } else if (state is MovieError) {
             return Center(
+              key: const Key("Error message"),
               child: Text(state.message),
             );
           } else {
