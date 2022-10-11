@@ -80,6 +80,7 @@ class _TvSeriesPageState extends State<TvSeriesPage> {
         ),
       ),
       appBar: AppBar(
+        key: const Key("tvseries page"),
         title: const Text('Ditonton'),
         actions: [
           IconButton(

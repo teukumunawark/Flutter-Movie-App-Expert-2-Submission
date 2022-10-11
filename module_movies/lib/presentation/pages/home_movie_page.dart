@@ -79,6 +79,7 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
         ),
       ),
       appBar: AppBar(
+        key: const Key("movie page"),
         title: const Text('Ditonton'),
         actions: [
           IconButton(
