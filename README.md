@@ -1,6 +1,7 @@
 # dimovie_final_expert_project
 
-A new Flutter project.
+##CODE MAGIC BADGE
+https://api.codemagic.io/apps/6343ed55c1533276a3ccc038/6343ed55c1533276a3ccc037/status_badge.svg
 
 ## Getting Started
 
