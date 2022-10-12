@@ -17,7 +17,11 @@ class SslPinningHelper {
 
   static Future<IOClient> createIoClient() async {
     final context = SecurityContext(withTrustedRoots: false);
+
     final cert = await rootBundle.load('assets/certificates.pem');
+
+    // Dicoding Certificates Test
+    // final cert = await rootBundle.load('assets/dicodingtest.pem');
 
     final httpClient = HttpClient(context: context);
 

@@ -1,4 +1,4 @@
-import 'package:module_common/ssl/ssl_pinning_helper.dart';
+import 'package:dimovie_final_expert_project/ssl/ssl_pinning_helper.dart';
 import 'package:module_movies/data/datasources/db/database_helper.dart';
 import 'package:module_movies/data/datasources/movie_local_data_source.dart';
 import 'package:module_movies/data/datasources/movie_remote_data_source.dart';

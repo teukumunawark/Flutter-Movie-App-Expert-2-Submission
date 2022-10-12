@@ -1,4 +1,5 @@
 import 'package:dimovie_final_expert_project/firebase_options.dart';
+import 'package:dimovie_final_expert_project/ssl/ssl_pinning_helper.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -21,9 +22,10 @@ import 'injection.dart' as di;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
+  await SslPinningHelper.initializing();
+
   di.init();
   runApp(const MyApp());
 }
