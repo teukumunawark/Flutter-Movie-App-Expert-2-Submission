@@ -11,7 +11,7 @@ import '../../domain/entities/genre.dart';
 
 class MovieDetailPage extends StatefulWidget {
   // ignore: constant_identifier_names
-  static const ROUTE_NAME = '/detail-movie';
+  static const routeName = '/detail-movie';
 
   final int id;
   const MovieDetailPage({Key? key, required this.id}) : super(key: key);
@@ -243,7 +243,7 @@ class DetailContent extends StatelessWidget {
                                       onTap: () {
                                         Navigator.pushReplacementNamed(
                                           context,
-                                          MovieDetailPage.ROUTE_NAME,
+                                          MovieDetailPage.routeName,
                                           arguments: movie.id,
                                         );
                                       },
