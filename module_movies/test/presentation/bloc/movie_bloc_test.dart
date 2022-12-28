@@ -162,8 +162,8 @@ void main() {
     blocTest<NowPlayingMovieBloc, MovieState>(
       "Should emit [Loading, Error] when get movie is unsuccessful",
       build: () {
-        when(mockGetNowPlayingMovies.execute())
-            .thenAnswer((_) async => Left(ServerFailure("Server Failure")));
+        when(mockGetNowPlayingMovies.execute()).thenAnswer(
+            (_) async => const Left(ServerFailure("Server Failure")));
         return nowPlayingBloc;
       },
       act: (bloc) => bloc.add(OnNowPlayingMovie()),
@@ -198,8 +198,8 @@ void main() {
     blocTest<PopularMovieBloc, MovieState>(
       "Should emit [Loading, Error] when get movie is unsuccessful",
       build: () {
-        when(mockGetPopularMovies.execute())
-            .thenAnswer((_) async => Left(ServerFailure("Server Failure")));
+        when(mockGetPopularMovies.execute()).thenAnswer(
+            (_) async => const Left(ServerFailure("Server Failure")));
         return popularBloc;
       },
       act: (bloc) => bloc.add(OnPopularMovie()),
@@ -234,8 +234,8 @@ void main() {
     blocTest<TopRatedMovieBloc, MovieState>(
       "Should emit [Loading, Error] when get movie is unsuccessful",
       build: () {
-        when(mockGetTopRatedMovies.execute())
-            .thenAnswer((_) async => Left(ServerFailure("Server Failure")));
+        when(mockGetTopRatedMovies.execute()).thenAnswer(
+            (_) async => const Left(ServerFailure("Server Failure")));
         return topRatedBloc;
       },
       act: (bloc) => bloc.add(OnTopRatedMovie()),
@@ -270,8 +270,8 @@ void main() {
     blocTest<RecommendationsBloc, MovieState>(
       "Should emit [Loading, Error] when get search is unsuccessful",
       build: () {
-        when(mockGetMovieRecommendations.execute(tId))
-            .thenAnswer((_) async => Left(ServerFailure("Server Failure")));
+        when(mockGetMovieRecommendations.execute(tId)).thenAnswer(
+            (_) async => const Left(ServerFailure("Server Failure")));
         return recommendationsBloc;
       },
       act: (bloc) => bloc.add(const OnRecommendationMovie(tId)),
@@ -308,8 +308,8 @@ void main() {
     blocTest<SearchMovieBloc, MovieState>(
       'Should emit [Loading, Error] when get search is unsuccessful',
       build: () {
-        when(mockSearchMovies.execute(tQuery))
-            .thenAnswer((_) async => Left(ServerFailure('Server Failure')));
+        when(mockSearchMovies.execute(tQuery)).thenAnswer(
+            (_) async => const Left(ServerFailure('Server Failure')));
         return searchMovieBloc;
       },
       act: (bloc) => bloc.add(const OnQueryChanged(tQuery)),
@@ -347,8 +347,8 @@ void main() {
     blocTest<DetailMovieBloc, MovieState>(
       "Should emit [Loading, Error] when get detail movie is unsuccessful",
       build: () {
-        when(mockGetMovieDetail.execute(tId))
-            .thenAnswer((_) async => Left(ServerFailure('Server Failure')));
+        when(mockGetMovieDetail.execute(tId)).thenAnswer(
+            (_) async => const Left(ServerFailure('Server Failure')));
         return detailMovieBloc;
       },
       act: (bloc) => bloc.add(const OnDetailMovie(tId)),
@@ -383,8 +383,8 @@ void main() {
       blocTest<WatchlistMovieBloc, MovieState>(
         "Should emit [Loading, Error] when get watchlist movie is unsuccessful",
         build: () {
-          when(mockGetWatchlistMovies.execute())
-              .thenAnswer((_) async => Left(ServerFailure("Server Failure")));
+          when(mockGetWatchlistMovies.execute()).thenAnswer(
+              (_) async => const Left(ServerFailure("Server Failure")));
           return watchlistBloc;
         },
         act: (bloc) => bloc.add(OnWatchlist()),
@@ -415,8 +415,8 @@ void main() {
       blocTest<WatchlistMovieBloc, MovieState>(
         "Should emit [Loading, Error] when save movie is unsuccessful",
         build: () {
-          when(mockSaveWatchlistMovie.execute(tMovieDetail))
-              .thenAnswer((_) async => Left(ServerFailure("Server Failure")));
+          when(mockSaveWatchlistMovie.execute(tMovieDetail)).thenAnswer(
+              (_) async => const Left(ServerFailure("Server Failure")));
           return watchlistBloc;
         },
         act: (bloc) => bloc.add(OnSaveWatchlist(tMovieDetail)),
@@ -449,8 +449,8 @@ void main() {
       blocTest<WatchlistMovieBloc, MovieState>(
         "Should emit [Loading, Error] when remove movie is unsuccessful",
         build: () {
-          when(mockRemoveWatchlistMovie.execute(tMovieDetail))
-              .thenAnswer((_) async => Left(ServerFailure("Server Failure")));
+          when(mockRemoveWatchlistMovie.execute(tMovieDetail)).thenAnswer(
+              (_) async => const Left(ServerFailure("Server Failure")));
           return watchlistBloc;
         },
         act: (bloc) => bloc.add(OnRemoveWatchlist(tMovieDetail)),
