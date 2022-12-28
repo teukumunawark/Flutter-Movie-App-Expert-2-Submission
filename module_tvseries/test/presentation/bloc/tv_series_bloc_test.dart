@@ -146,8 +146,8 @@ void main() {
     blocTest<OnTheAirTvSeriesBloc, TvSeriesState>(
       "Should emit [Loading, Error] when get tv series is unsuccessful",
       build: () {
-        when(mockGetOnTheAirTvSeries.execute())
-            .thenAnswer((_) async => Left(ServerFailure("Server Failure")));
+        when(mockGetOnTheAirTvSeries.execute()).thenAnswer(
+            (_) async => const Left(ServerFailure("Server Failure")));
         return onTheAirTvSeries;
       },
       act: (bloc) => bloc.add(OnTvSeriesTheAir()),
@@ -181,8 +181,8 @@ void main() {
     blocTest<PopularTvSeriesBloc, TvSeriesState>(
       "Should emit [Loading, Error] when get tv series is unsuccessful",
       build: () {
-        when(mockGetPopularTvSeries.execute())
-            .thenAnswer((_) async => Left(ServerFailure("Server Failure")));
+        when(mockGetPopularTvSeries.execute()).thenAnswer(
+            (_) async => const Left(ServerFailure("Server Failure")));
         return popularTvseries;
       },
       act: (bloc) => bloc.add(OnPopularTvSeries()),
@@ -217,8 +217,8 @@ void main() {
     blocTest<TopRatedTvSeriesBloc, TvSeriesState>(
       "Should emit [Loading, Error] when get tv series is unsuccessful",
       build: () {
-        when(mockGetTopRatedTvSeries.execute())
-            .thenAnswer((_) async => Left(ServerFailure("Server Failure")));
+        when(mockGetTopRatedTvSeries.execute()).thenAnswer(
+            (_) async => const Left(ServerFailure("Server Failure")));
         return topRatedTvSeries;
       },
       act: (bloc) => bloc.add(OnTopRatedTvSeries()),
@@ -254,8 +254,8 @@ void main() {
     blocTest<SearchTvSeriesBloc, TvSeriesState>(
       "Should emit [Loading, Error] when get tv series is unsuccessful",
       build: () {
-        when(mockSearchTvSeries.execute(tQuery))
-            .thenAnswer((_) async => Left(ServerFailure("Server Failure")));
+        when(mockSearchTvSeries.execute(tQuery)).thenAnswer(
+            (_) async => const Left(ServerFailure("Server Failure")));
         return searchTvSeries;
       },
       act: (bloc) => bloc.add(const OnQueryChangedTvSeries(tQuery)),
@@ -293,8 +293,8 @@ void main() {
       blocTest<RecommendationsTvBloc, TvSeriesState>(
         "Should emit [Loading, Error] when get tv series is unsuccessful",
         build: () {
-          when(mockGetTvRecommendations.execute(tId))
-              .thenAnswer((_) async => Left(ServerFailure("Server Failure")));
+          when(mockGetTvRecommendations.execute(tId)).thenAnswer(
+              (_) async => const Left(ServerFailure("Server Failure")));
           return recommendationsTvSeries;
         },
         act: (bloc) => bloc.add(const OnRecommendationTvSeries(tId)),
@@ -330,8 +330,8 @@ void main() {
     blocTest<DetailTvSeriesBloc, TvSeriesState>(
       "Should emit [Loading, Error] when get detail series is unsuccessful",
       build: () {
-        when(mockGetTvSeriesDetail.execute(tId))
-            .thenAnswer((_) async => Left(ServerFailure("Server Failure")));
+        when(mockGetTvSeriesDetail.execute(tId)).thenAnswer(
+            (_) async => const Left(ServerFailure("Server Failure")));
         return detailTvSeriesBloc;
       },
       act: (bloc) => bloc.add(const OnDetailTvSeries(tId)),
@@ -367,8 +367,8 @@ void main() {
       blocTest<WatchlistTvSeriesBloc, TvSeriesState>(
         "Should emit [Loading, Error] when get detail series is unsuccessful",
         build: () {
-          when(mockGetWatchlistTvSeries.execute())
-              .thenAnswer((_) async => Left(ServerFailure("Server Failure")));
+          when(mockGetWatchlistTvSeries.execute()).thenAnswer(
+              (_) async => const Left(ServerFailure("Server Failure")));
           return watchlistTvSeries;
         },
         act: (bloc) => bloc.add(OnWatchlistTvSeries()),
@@ -438,7 +438,8 @@ void main() {
         "Should emit [Loading, Error] when get detail series is unsuccessful",
         build: () {
           when(mockSaveWatchlistTvSeries.execute(testTvSeriesDetail))
-              .thenAnswer((_) async => Left(ServerFailure("Server Failure")));
+              .thenAnswer(
+                  (_) async => const Left(ServerFailure("Server Failure")));
           return watchlistTvSeries;
         },
         act: (bloc) => bloc.add(OnSaveWatchlistTvSeries(testTvSeriesDetail)),
@@ -474,7 +475,8 @@ void main() {
         "Should emit [Loading, Error] when get detail series is unsuccessful",
         build: () {
           when(mockRemoveWatchlistTvSeries.execute(testTvSeriesDetail))
-              .thenAnswer((_) async => left(ServerFailure("Server Failure")));
+              .thenAnswer(
+                  (_) async => left(const ServerFailure("Server Failure")));
           return watchlistTvSeries;
         },
         act: (bloc) => bloc.add(OnRemoveWatchlistTvSeries(testTvSeriesDetail)),

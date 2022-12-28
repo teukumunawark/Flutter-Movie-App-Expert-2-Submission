@@ -6,7 +6,7 @@ import '../widgets/movie_card_list.dart';
 
 class TopRatedMoviesPage extends StatefulWidget {
   // ignore: constant_identifier_names
-  static const ROUTE_NAME = '/top-rated-movie';
+  static const routeName = '/top-rated-movie';
 
   const TopRatedMoviesPage({Key? key}) : super(key: key);
 

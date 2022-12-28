@@ -2,8 +2,7 @@ import 'package:equatable/equatable.dart';
 import 'package:module_movies/domain/entities/genre.dart';
 
 class MovieDetail extends Equatable {
-  // ignore: prefer_const_constructors_in_immutables
-  MovieDetail({
+  const MovieDetail({
     required this.adult,
     required this.backdropPath,
     required this.genres,

@@ -10,7 +10,7 @@ import 'package:module_tvseries/presentation/bloc/tv_series_bloc.dart';
 
 class TvSeriesDetailPage extends StatefulWidget {
   // ignore: constant_identifier_names
-  static const ROUTE_NAME = '/detail-tv';
+  static const routeName = '/detail-tv';
 
   final int id;
   const TvSeriesDetailPage({Key? key, required this.id}) : super(key: key);
@@ -331,7 +331,7 @@ class DetailContent extends StatelessWidget {
                                       onTap: () {
                                         Navigator.pushReplacementNamed(
                                           context,
-                                          TvSeriesDetailPage.ROUTE_NAME,
+                                          TvSeriesDetailPage.routeName,
                                           arguments: tvSeries.id,
                                         );
                                       },

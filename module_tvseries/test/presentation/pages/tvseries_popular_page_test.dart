@@ -17,7 +17,7 @@ void main() {
     popularTvBlocHelper = PopularTvBlocHelper();
   });
 
-  Widget _makeTestableWidget(Widget body) {
+  Widget makeTestableWidget(Widget body) {
     return BlocProvider<PopularTvSeriesBloc>(
       create: (_) => popularTvBlocHelper,
       child: MaterialApp(
@@ -38,7 +38,7 @@ void main() {
       final circularProgressIndicator = find.byType(CircularProgressIndicator);
 
       await widgetTester.pumpWidget(
-        _makeTestableWidget(const PopularTvSeriesPage()),
+        makeTestableWidget(const PopularTvSeriesPage()),
       );
 
       expect(circularProgressIndicator, findsOneWidget);
@@ -55,7 +55,7 @@ void main() {
       final listview = find.byType(ListView);
 
       await widgetTester.pumpWidget(
-        _makeTestableWidget(const PopularTvSeriesPage()),
+        makeTestableWidget(const PopularTvSeriesPage()),
       );
 
       expect(listview, findsOneWidget);
@@ -72,7 +72,7 @@ void main() {
       final key = find.byKey(const Key("Error message"));
 
       await widgetTester.pumpWidget(
-        _makeTestableWidget(const PopularTvSeriesPage()),
+        makeTestableWidget(const PopularTvSeriesPage()),
       );
 
       expect(key, findsOneWidget);

@@ -8,7 +8,7 @@ import '../common/utils.dart';
 
 class WatchlistPage extends StatefulWidget {
   // ignore: constant_identifier_names
-  static const ROUTE_NAME = '/watchlist';
+  static const routeName = '/watchlist';
 
   const WatchlistPage({Key? key}) : super(key: key);
 

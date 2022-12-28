@@ -31,7 +31,7 @@ void main() {
     watchlistTvBlocHelper = WatchlistTvBlocHelper();
   });
 
-  Widget _makeTestableWidget(Widget body) {
+  Widget makeTestableWidget(Widget body) {
     return MultiProvider(
       providers: [
         BlocProvider<RecommendationsTvBloc>(
@@ -61,7 +61,7 @@ void main() {
       final circularProgressIndicator = find.byType(CircularProgressIndicator);
 
       await widgetTester.pumpWidget(
-        _makeTestableWidget(
+        makeTestableWidget(
           const TvSeriesDetailPage(
             id: 1,
           ),
@@ -90,7 +90,7 @@ void main() {
       final watchListButtonIcon = find.byIcon(Icons.add);
 
       await widgetTester.pumpWidget(
-        _makeTestableWidget(
+        makeTestableWidget(
           const TvSeriesDetailPage(
             id: 1,
           ),
@@ -119,7 +119,7 @@ void main() {
       final watchListButtonIcon = find.byIcon(Icons.check);
 
       await widgetTester.pumpWidget(
-        _makeTestableWidget(
+        makeTestableWidget(
           const TvSeriesDetailPage(
             id: 1,
           ),

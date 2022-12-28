@@ -17,7 +17,7 @@ void main() {
     registerFallbackValue(PopularMovieEventHelper());
   });
 
-  Widget _makeTestableWidget(Widget body) {
+  Widget makeTestableWidget(Widget body) {
     return BlocProvider<TopRatedMovieBloc>(
       create: (_) => topRatedMovieBlocHelper,
       child: MaterialApp(
@@ -38,7 +38,7 @@ void main() {
       final circularProgressIndicator = find.byType(CircularProgressIndicator);
 
       await widgetTester.pumpWidget(
-        _makeTestableWidget(const TopRatedMoviesPage()),
+        makeTestableWidget(const TopRatedMoviesPage()),
       );
 
       expect(circularProgressIndicator, findsOneWidget);
@@ -55,7 +55,7 @@ void main() {
       final circularProgressIndicator = find.byType(ListView);
 
       await widgetTester.pumpWidget(
-        _makeTestableWidget(const TopRatedMoviesPage()),
+        makeTestableWidget(const TopRatedMoviesPage()),
       );
 
       expect(circularProgressIndicator, findsOneWidget);
@@ -72,7 +72,7 @@ void main() {
       final circularProgressIndicator = find.byKey(const Key('Error message'));
 
       await widgetTester.pumpWidget(
-        _makeTestableWidget(const TopRatedMoviesPage()),
+        makeTestableWidget(const TopRatedMoviesPage()),
       );
 
       expect(circularProgressIndicator, findsOneWidget);
