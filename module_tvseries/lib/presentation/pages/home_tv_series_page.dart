@@ -14,7 +14,7 @@ import 'package:module_tvseries/presentation/pages/tv_series_detail_page.dart';
 
 class TvSeriesPage extends StatefulWidget {
   // ignore: constant_identifier_names
-  static const ROUTE_NAME = '/tv-page';
+  static const routeName = '/tv-page';
   const TvSeriesPage({Key? key}) : super(key: key);
 
   @override
@@ -51,7 +51,7 @@ class _TvSeriesPageState extends State<TvSeriesPage> {
               onTap: () {
                 Navigator.pushReplacementNamed(
                   context,
-                  HomeMoviePage.ROUTE_NAME,
+                  HomeMoviePage.routeName,
                 );
               },
             ),
@@ -66,12 +66,12 @@ class _TvSeriesPageState extends State<TvSeriesPage> {
               leading: const Icon(Icons.save_alt),
               title: const Text('Watchlist'),
               onTap: () {
-                Navigator.pushNamed(context, WatchlistPage.ROUTE_NAME);
+                Navigator.pushNamed(context, WatchlistPage.routeName);
               },
             ),
             ListTile(
               onTap: () {
-                Navigator.pushNamed(context, AboutPage.ROUTE_NAME);
+                Navigator.pushNamed(context, AboutPage.routeName);
               },
               leading: const Icon(Icons.info_outline),
               title: const Text('About'),
@@ -85,7 +85,7 @@ class _TvSeriesPageState extends State<TvSeriesPage> {
         actions: [
           IconButton(
             onPressed: () {
-              Navigator.pushNamed(context, SearchPageTvSeries.ROUTE_NAME);
+              Navigator.pushNamed(context, SearchPageTvSeries.routeName);
             },
             icon: const Icon(Icons.search),
           )
@@ -119,7 +119,7 @@ class _TvSeriesPageState extends State<TvSeriesPage> {
               _buildSubHeading(
                 title: 'Popular',
                 onTap: () {
-                  Navigator.pushNamed(context, PopularTvSeriesPage.ROUTE_NAME);
+                  Navigator.pushNamed(context, PopularTvSeriesPage.routeName);
                 },
               ),
               BlocBuilder<PopularTvSeriesBloc, TvSeriesState>(
@@ -140,7 +140,7 @@ class _TvSeriesPageState extends State<TvSeriesPage> {
               _buildSubHeading(
                 title: 'Top Rated',
                 onTap: () {
-                  Navigator.pushNamed(context, TopRatedTvSeriesPage.ROUTE_NAME);
+                  Navigator.pushNamed(context, TopRatedTvSeriesPage.routeName);
                 },
               ),
               BlocBuilder<TopRatedTvSeriesBloc, TvSeriesState>(
@@ -209,14 +209,14 @@ class TvSeriesList extends StatelessWidget {
               onTap: () {
                 Navigator.pushNamed(
                   context,
-                  TvSeriesDetailPage.ROUTE_NAME,
+                  TvSeriesDetailPage.routeName,
                   arguments: tv.id,
                 );
               },
               child: ClipRRect(
                 borderRadius: const BorderRadius.all(Radius.circular(16)),
                 child: CachedNetworkImage(
-                  imageUrl: '$BASE_IMAGE_URL${tv.posterPath}',
+                  imageUrl: '$baseImageURL${tv.posterPath}',
                   placeholder: (context, url) => const Center(
                     child: CircularProgressIndicator(),
                   ),
