@@ -30,7 +30,7 @@ void main() {
     watchlistMovieBlocHelper = WatchlistMovieBlocHelper();
   });
 
-  Widget _makeTestableWidget(Widget body) {
+  Widget makeTestableWidget(Widget body) {
     return MultiProvider(
       providers: [
         BlocProvider<DetailMovieBloc>(
@@ -60,7 +60,7 @@ void main() {
       final circularProgressIndicator = find.byType(CircularProgressIndicator);
 
       await widgetTester.pumpWidget(
-        _makeTestableWidget(
+        makeTestableWidget(
           const MovieDetailPage(
             id: 1,
           ),
@@ -89,7 +89,7 @@ void main() {
       final watchListButtonIcon = find.byIcon(Icons.add);
 
       await widgetTester.pumpWidget(
-        _makeTestableWidget(
+        makeTestableWidget(
           const MovieDetailPage(
             id: 1,
           ),
@@ -118,7 +118,7 @@ void main() {
       final watchListButtonIcon = find.byIcon(Icons.check);
 
       await widgetTester.pumpWidget(
-        _makeTestableWidget(
+        makeTestableWidget(
           const MovieDetailPage(
             id: 1,
           ),
